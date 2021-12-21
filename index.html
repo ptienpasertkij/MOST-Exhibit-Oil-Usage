@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" type="text/css" href="semantic.min.css">
+
+</head>
+<style>
+    html, body {
+        height: 100%;
+    }
+
+    iframe {
+        border: none;
+        height: 30px;
+        width: 150px;
+
+        /* transform-origin: top; */
+    }
+
+    .ui.main.container {
+        /* background-color: blueviolet; */
+        height: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+    }
+
+    .scaled {
+        position: relative;
+        z-index: -10;
+        transform: translate(0, -6px) scale(2.5); 
+    }
+
+    .align-top {
+        transform-origin: top;
+    }
+
+    .align-left {
+        transform-origin: left;
+    }
+
+    .align-bottom {
+        transform-origin: bottom;
+        /* transform: translate(0, -10px) scale(2.5);  */
+    }
+
+    .units {
+        padding-top: 10px;
+        text-transform: uppercase;
+    }
+
+    div.section {
+        padding-top: 20px;
+    }
+
+    img {
+        height: 70px;
+    }
+
+    p.header {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    div.center.aligned.header {
+        margin-top: 30px;
+    }
+
+    #did_you_know {
+        border: 5px solid #2bb6b6;
+        border-radius: 10px;
+    }
+
+    .info {
+        font-size: 1.8rem;
+    }
+
+    #percent_renewable {
+        width: 112px;
+        transform: scale(1.6) translate(-26px, 0);
+    }
+
+    #span_percent_renewable {
+        display: inline-block;
+        width: 155px;
+    }
+
+    #solar_energy {
+        width: 150px;
+        transform: scale(1.6) translate(-30px, 0);
+        position: relative;
+        z-index: -100;
+    }
+
+    #span_solar_energy {
+        display: inline-block;
+        width: 210px;
+    }
+
+    div.sixteen.wide.column.unit_conv {
+        padding: 0px;
+        font-size: 1.1rem;
+        font-weight: 800;
+    }
+
+    .ui.grid+.grid {
+        margin-top: 3rem;
+    }
+    
+    h1.ui.header {
+        font-size: 3rem;
+        color: #2bb6b6;
+    }
+    
+    h2.ui.header {
+        font-size: 2rem;
+    }
+
+    /* #oil_countdown {
+        margin-top: 50px;
+    } */
+</style>
+<body>
+    <div class="ui main container">
+        <div id="energy_usage">
+            <div class="ui center aligned container section">
+                <h1 class="ui header">Energy Use on Planet Earth (this year)</span></h1>
+            </div>
+            <div class="ui grid">
+                <div class="eight wide column center aligned statistic">
+                    <div class="image"><img src="assets/img/icons/power-off-button.png"></div>
+                    <p class="header"><b>Global Energy Usage</b></p>
+                    <iframe class='scaled' title='Terajoules of energy used' src='https://www.theworldcounts.com/embed/challenges/25?background_color=white&color=black&font_size=14'></iframe>
+                    <div class="units label">Terajoules</div>
+                </div>
+                <div class="eight wide column center aligned">
+                    <div class="image"><img src="assets/img/icons/car-battery.png"></div>
+                    <p class="header"><b>Global Electricity Usage</b></p>
+                    <iframe class='scaled' title='Terajoules of electricity used' src='https://www.theworldcounts.com/embed/challenges/102?background_color=white&color=black&font_size=14'></iframe>
+                    <div class="units label">Terajoules</div>
+                </div>
+            </div>
+            
+            <div class="ui grid">
+                <div class="eight wide column center aligned statistic">
+                    <div class="ui grid">
+                        <div class="eight wide column center aligned statistic">
+                            <div class="image"><img src="assets/img/icons/oil-pump.png"></div>
+                            <p class="header"><b>Energy Used by Mining Industry</b></p>
+                            <iframe class='scaled' title='Energy use from mining' src='https://www.theworldcounts.com/embed/challenges/32?background_color=white&color=black&font_size=14'></iframe>
+                            <div class="units label">Gigajoules</div>
+            
+                        </div>
+                        <div class="eight wide column center aligned statistic">
+                            <div class="image"><img src="assets/img/icons/power-strip.png"></div>
+                            <p class="header"><b>Energy Used by Households</b></p>
+                            <iframe class='scaled' title='Gigajoules used in households' src='https://www.theworldcounts.com/embed/challenges/82?background_color=white&color=black&font_size=14'></iframe>
+                            <div class="units label">Gigajoules</div>
+                        </div>
+                        <div class="sixteen wide column unit_conv">
+                            <p>1 TERAJOULE = 1000 GIGAJOULES</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="did_you_know" class="eight wide column center aligned">
+                    <h2 class="ui header">DID YOU KNOW?</h2>
+                    <p class="info">
+                        <span id="span_percent_renewable">
+                            <iframe id="percent_renewable" class='align-left' title='Percent of electricity produced from renewable sources' src='https://www.theworldcounts.com/embed/challenges/55?background_color=white&color=black&font_size=14'></iframe>
+                        </span>
+                        percent of global electricity usage is being produced by renewable resources.
+                    </p>
+                    <p class="info">In this year so far, the Earth has absorbed 
+                        <span id="span_solar_energy">
+                            <iframe id="solar_energy" class='align-left' title='Terajoules of solar energy striking Earth' src='https://www.theworldcounts.com/embed/challenges/65?background_color=white&color=black&font_size=14'></iframe>
+                        </span>
+                         Terajoules of energy from the Sun.
+                    </p>
+                    <div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="oil_countdown ui segment">      
+            <h1 class="ui header center aligned">Time Left to End of Oil</span></h1>
+            <div class="ui center aligned header">
+                <iframe class='scaled align-bottom' title='Time left to the end of oil' src='https://www.theworldcounts.com/embed/challenges/108?background_color=white&color=black&font_size=14'></iframe>
+            </div>
+        </div>
+    </div>
+    
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script src="semantic.min.js"></script>
+</body>
+</html>
