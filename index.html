@@ -17,12 +17,9 @@
         border: none;
         height: 30px;
         width: 150px;
-
-        /* transform-origin: top; */
     }
 
     .ui.main.container {
-        /* background-color: blueviolet; */
         height: 100%;
         display: flex;
         flex-flow: column nowrap;
@@ -45,7 +42,6 @@
 
     .align-bottom {
         transform-origin: bottom;
-        /* transform: translate(0, -10px) scale(2.5);  */
     }
 
     .units {
@@ -71,7 +67,7 @@
     }
 
     #did_you_know {
-        border: 5px solid #2bb6b6;
+        border: 5px solid #d44949;
         border-radius: 10px;
     }
 
@@ -106,29 +102,17 @@
         font-size: 1.1rem;
         font-weight: 800;
     }
-
-    .ui.grid+.grid {
-        margin-top: 3rem;
-    }
     
-    h1.ui.header {
-        font-size: 3rem;
-        color: #2bb6b6;
+    .ui.header, p.header {
+        color: #d44949;
     }
-    
-    h2.ui.header {
-        font-size: 2rem;
-    }
-
-    /* #oil_countdown {
-        margin-top: 50px;
-    } */
 </style>
+
 <body>
     <div class="ui main container">
         <div id="energy_usage">
             <div class="ui center aligned container section">
-                <h1 class="ui header">Energy Use on Planet Earth (this year)</span></h1>
+                <h1 class="ui header">Energy Use on Planet Earth in <span id="year"></span></span></h1>
             </div>
             <div class="ui grid">
                 <div class="eight wide column center aligned statistic">
@@ -198,6 +182,16 @@
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
-<script src="semantic.min.js"></script>
+<!-- <script src="semantic.min.js"></script> -->
+<script>
+    $(document).ready(()=> {
+        const year = new Date().getFullYear();
+        console.log(year);
+        $("#year").text(year);
+    });
+    setInterval(() => {
+        window.location.reload()
+    },7200000)
+</script>
 </body>
 </html>
