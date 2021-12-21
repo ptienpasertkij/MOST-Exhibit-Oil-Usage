@@ -58,7 +58,7 @@
     }
 
     p.header {
-        font-size: 1.5rem;
+        font-size: 2rem;
         margin-bottom: 10px;
     }
 
@@ -69,10 +69,12 @@
     #did_you_know {
         border: 5px solid #d44949;
         border-radius: 10px;
+        padding: 20px;
+        margin: 0px 30px;
     }
 
     .info {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     #percent_renewable {
@@ -134,7 +136,7 @@
                     <div class="ui grid">
                         <div class="eight wide column center aligned statistic">
                             <div class="image"><img src="assets/img/icons/oil-pump.png"></div>
-                            <p class="header"><b>Energy Used by Mining Industry</b></p>
+                            <p class="header"><b>Energy Used by Mining</b></p>
                             <iframe class='scaled' title='Energy use from mining' src='https://www.theworldcounts.com/embed/challenges/32?background_color=white&color=black&font_size=14'></iframe>
                             <div class="units label">Gigajoules</div>
             
@@ -150,21 +152,21 @@
                         </div>
                     </div>
                 </div>
-                <div id="did_you_know" class="eight wide column center aligned">
-                    <h2 class="ui header">DID YOU KNOW?</h2>
-                    <p class="info">
-                        <span id="span_percent_renewable">
-                            <iframe id="percent_renewable" class='align-left' title='Percent of electricity produced from renewable sources' src='https://www.theworldcounts.com/embed/challenges/55?background_color=white&color=black&font_size=14'></iframe>
-                        </span>
-                        percent of global electricity usage is being produced by renewable resources.
-                    </p>
-                    <p class="info">In this year so far, the Earth has absorbed 
-                        <span id="span_solar_energy">
-                            <iframe id="solar_energy" class='align-left' title='Terajoules of solar energy striking Earth' src='https://www.theworldcounts.com/embed/challenges/65?background_color=white&color=black&font_size=14'></iframe>
-                        </span>
-                         Terajoules of energy from the Sun.
-                    </p>
-                    <div>
+                <div class="eight wide column center aligned">
+                    <div id="did_you_know">
+                        <h2 class="ui header">DID YOU KNOW?</h2>
+                        <p class="info">
+                            <span id="span_percent_renewable">
+                                <iframe id="percent_renewable" class='align-left' title='Percent of electricity produced from renewable sources' src='https://www.theworldcounts.com/embed/challenges/55?background_color=white&color=black&font_size=14'></iframe>
+                            </span>
+                            percent of global electricity usage is being produced by renewable resources.
+                        </p>
+                        <p class="info">In this year so far, the Earth has absorbed 
+                            <span id="span_solar_energy">
+                                <iframe id="solar_energy" class='align-left' title='Terajoules of solar energy striking Earth' src='https://www.theworldcounts.com/embed/challenges/65?background_color=white&color=black&font_size=14'></iframe>
+                            </span>
+                             Terajoules of energy from the Sun.
+                        </p>
                     </div>
                 </div>
             </div>
