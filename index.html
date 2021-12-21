@@ -29,7 +29,13 @@
     .scaled {
         position: relative;
         z-index: -10;
-        transform: translate(0, -6px) scale(2.5); 
+        transform: translate(0, -5px) scale(3.25); 
+    }
+
+    .scaled-last {
+        transform: translate(0, 20px) scale(3.25);
+        position: relative;
+        z-index: -10;
     }
 
     .align-top {
@@ -45,8 +51,9 @@
     }
 
     .units {
-        padding-top: 10px;
+        padding-top: 24px;
         text-transform: uppercase;
+        font-size: 20px;
     }
 
     div.section {
@@ -58,8 +65,8 @@
     }
 
     p.header {
-        font-size: 2rem;
-        margin-bottom: 10px;
+        font-size: 2.75rem;
+        margin-bottom: 13px;
     }
 
     div.center.aligned.header {
@@ -74,39 +81,49 @@
     }
 
     .info {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     #percent_renewable {
-        width: 112px;
-        transform: scale(1.6) translate(-26px, 0);
+        width: 115px;
+        transform: scale(2.25) translate(-35px, -2px);
+        position: relative;
+        z-index: -10;
     }
 
     #span_percent_renewable {
         display: inline-block;
-        width: 155px;
+        width: 220px;
     }
 
     #solar_energy {
         width: 150px;
-        transform: scale(1.6) translate(-30px, 0);
+        transform: scale(2.25) translate(-44px, -3px);
         position: relative;
-        z-index: -100;
+        z-index: -10;
     }
 
     #span_solar_energy {
         display: inline-block;
-        width: 210px;
+        width: 300px;
     }
 
     div.sixteen.wide.column.unit_conv {
-        padding: 0px;
-        font-size: 1.1rem;
+        padding: 14px;
+        font-size: 20px;
         font-weight: 800;
     }
     
     .ui.header, p.header {
         color: #d44949;
+    }
+
+    .ui.grid.first {
+        margin-top: 20px;
+    }
+
+    p {
+        line-height: 1.6;
     }
 </style>
 
@@ -116,7 +133,7 @@
             <div class="ui center aligned container section">
                 <h1 class="ui header">Energy Use on Planet Earth in <span id="year"></span></span></h1>
             </div>
-            <div class="ui grid">
+            <div class="ui grid first">
                 <div class="eight wide column center aligned statistic">
                     <div class="image"><img src="assets/img/icons/power-off-button.png"></div>
                     <p class="header"><b>Global Energy Usage</b></p>
@@ -136,14 +153,14 @@
                     <div class="ui grid">
                         <div class="eight wide column center aligned statistic">
                             <div class="image"><img src="assets/img/icons/oil-pump.png"></div>
-                            <p class="header"><b>Energy Used by Mining</b></p>
+                            <p class="header"><b>Energy Used by <br>Mining Industry</b></p>
                             <iframe class='scaled' title='Energy use from mining' src='https://www.theworldcounts.com/embed/challenges/32?background_color=white&color=black&font_size=14'></iframe>
                             <div class="units label">Gigajoules</div>
             
                         </div>
                         <div class="eight wide column center aligned statistic">
                             <div class="image"><img src="assets/img/icons/power-strip.png"></div>
-                            <p class="header"><b>Energy Used by Households</b></p>
+                            <p class="header"><b>Energy Used by <br>Households</b></p>
                             <iframe class='scaled' title='Gigajoules used in households' src='https://www.theworldcounts.com/embed/challenges/82?background_color=white&color=black&font_size=14'></iframe>
                             <div class="units label">Gigajoules</div>
                         </div>
@@ -175,7 +192,7 @@
         <div id="oil_countdown ui segment">      
             <h1 class="ui header center aligned">Time Left to End of Oil</span></h1>
             <div class="ui center aligned header">
-                <iframe class='scaled align-bottom' title='Time left to the end of oil' src='https://www.theworldcounts.com/embed/challenges/108?background_color=white&color=black&font_size=14'></iframe>
+                <iframe class='scaled-last align-bottom' title='Time left to the end of oil' src='https://www.theworldcounts.com/embed/challenges/108?background_color=white&color=black&font_size=14'></iframe>
             </div>
         </div>
     </div>
